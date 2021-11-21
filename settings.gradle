@@ -1,3 +1,4 @@
 rootProject.name = 'home-library'
 include 'library-api'
+include 'library-core'
 

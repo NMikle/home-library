@@ -1,7 +1,5 @@
 package io.mikle.home.lib.api.exception;
 
-import io.mikle.home.lib.api.model.ErrorCode;
-
 import java.io.Serial;
 import java.util.List;
 

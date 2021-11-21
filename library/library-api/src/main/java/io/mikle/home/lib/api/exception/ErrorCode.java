@@ -1,4 +1,4 @@
-package io.mikle.home.lib.api.model;
+package io.mikle.home.lib.api.exception;
 
 public interface ErrorCode {
 

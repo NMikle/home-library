@@ -18,7 +18,7 @@ import static org.springframework.http.HttpStatus.NO_CONTENT;
 import static org.springframework.http.HttpStatus.OK;
 
 @RequestMapping("/v1/books")
-public interface BookRestService {
+public interface BookRest {
 
     @GetMapping
     @ResponseStatus(OK)

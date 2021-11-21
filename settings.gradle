@@ -1,4 +1,8 @@
-rootProject.name = 'home-library'
-include 'library-api'
-include 'library-core'
+new File("$settingsDir/library").eachDir { File libraryService ->
+    include libraryService.name
+    def currentService = project(":$libraryService.name")
+    currentService.projectDir = libraryService
+    currentService.buildFileName = "${currentService.name}.gradle"
+}
 
+rootProject.name = 'home-library'

@@ -19,3 +19,11 @@ repositories {
 dependencies {
     api 'org.springframework:spring-web'
 }
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}

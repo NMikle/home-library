@@ -12,11 +12,21 @@ import java.util.List;
 import java.util.Locale;
 
 @Service
-public record PropertyErrorService(MessageSource messageSource,
-                                   @Value("${error.postfix.message}") String messagePostfix,
-                                   @Value("${error.postfix.code}") String httpStatusPostfix) implements ErrorService {
+public class PropertyErrorService implements ErrorService {
 
     private static final String DOT = ".";
+
+    @Value("${error.postfix.message}")
+    private String messagePostfix;
+
+    @Value("${error.postfix.code}")
+    private String httpStatusPostfix;
+
+    private final MessageSource messageSource;
+
+    public PropertyErrorService(MessageSource messageSource) {
+        this.messageSource = messageSource;
+    }
 
     @Override
     public ErrorData retrieve(ErrorCode code, List<Object> params, Locale locale) {
